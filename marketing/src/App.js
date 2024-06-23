@@ -10,6 +10,7 @@ import Pricing from "./components/Pricing";
 const generateClassName = createGenerateClassName({
   productionPrefix: "ma",
 });
+
 function App() {
   return (
     <div>
