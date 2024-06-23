@@ -1,13 +1,23 @@
 import React from "react";
 import MarketingApp from "./components/MarketingApp";
+import {
+  StylesProvider,
+  createGenerateClassName,
+} from "@material-ui/core/styles";
+import Header from "./components/Header";
+
+const generateClassName = createGenerateClassName({
+  productionPrefix: "co",
+});
 
 function App() {
   return (
-    <div>
-      <h1>Hi There!!!!!!</h1>
-      <hr></hr>
-      <MarketingApp />
-    </div>
+    <StylesProvider generateClassName={generateClassName}>
+      <div>
+        <Header />
+        <MarketingApp />
+      </div>
+    </StylesProvider>
   );
 }
 
